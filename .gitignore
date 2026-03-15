@@ -1,65 +1,44 @@
 # =========================
-# Python 基本
+# Python Basic & Environments
 # =========================
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-
-# 虛擬環境
 .venv/
 venv/
 env/
 
 # =========================
-# Jupyter / IPython
-# =========================
-.ipynb_checkpoints/
-*.ipynb
-
-# =========================
-# 系統檔
-# =========================
-.DS_Store
-Thumbs.db
-
-# =========================
-# IDE / Editor
+# IDE / System
 # =========================
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
 *.swp
 
 # =========================
-# 測試 / Coverage
+# Project Specific - Experiments
 # =========================
-.pytest_cache/
-.coverage
-htmlcov/
-
-# =========================
-# 專案輸出（你的情境）
-# =========================
-# 實驗結果
 experiments/results/
+experiments/configs/
 
-# 模型檔（通常很大）
+# model
 *.pkl
 *.joblib
+*.pth
 *.h5
 
 # =========================
-# 資料檔（視需求）
+# Project Specific - Data
 # =========================
-data/*.csv
-data/*.parquet
-data/*.feather
+LD2011_2014.txt
 
-# 如果你有範例資料要留
-!data/sample_*.csv
+# Exclude data artifacts but keep the pre-processed dataset
+data/*
+!data/source_data.parquet
+!data/dataset.py
 
 # =========================
-# 環境變數 / 機密
+# Project Specific - Visualization
 # =========================
-.env
-.env.*
+!visualization/summary_result.csv
